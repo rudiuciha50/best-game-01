@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DUNGEON DELVER</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#080816;display:flex;justify-content:center;align-items:center;height:100vh;overflow:hidden;font-family:monospace}
+#wrap{position:relative}
+canvas{display:block;image-rendering:auto;border:3px solid #2a2a4e;border-radius:6px;box-shadow:0 0 30px rgba(80,130,255,0.15)}
+#hud{position:absolute;top:12px;left:50%;transform:translateX(-50%);color:#d0d0f0;font-size:13px;display:flex;gap:28px;z-index:10;background:rgba(8,8,22,0.85);padding:6px 24px;border-radius:20px;border:1px solid #2a2a4e;pointer-events:none}
+.hud-item{display:flex;align-items:center;gap:5px}
+.hud-val{color:#ffd700;font-weight:bold}
+.hp-bar{width:80px;height:8px;background:#333;border-radius:4px;overflow:hidden;display:inline-block}
+.hp-fill{height:100%;background:linear-gradient(90deg,#e44,#f66);transition:width 0.3s;border-radius:4px}
+.floor-indicator{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);color:#ffd700;font-size:18px;font-weight:bold;text-shadow:0 0 10px rgba(255,200,0,0.5);pointer-events:none;opacity:0;transition:opacity 0.5s}
+</style>
+</head>
+<body>
+<div id="wrap">
+<canvas id="c"></canvas>
+<div id="hud">
+  <div class="hud-item">❤️ <div class="hp-bar"><div class="hp-fill" id="hpbar" style="width:100%"></div></div> <span class="hud-val" id="hp">10</span></div>
+  <div class="hud-item">🪙 <span class="hud-val" id="coins">0</span></div>
+  <div class="hud-item">👾 <span class="hud-val" id="enemies">0</span></div>
+  <div class="hud-item">⬇ F<span class="hud-val" id="floor">1</span></div>
+</div>
+<div class="floor-indicator" id="floor-msg"></div>
+</div>
+<script src="sound.js"></script>
+<script src="entity.js"></script>
+<script src="dungeon.js"></script>
+<script src="render.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
