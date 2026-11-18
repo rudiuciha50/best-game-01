@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DUNGEON DELVER</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0f;display:flex;justify-content:center;align-items:center;height:100vh;overflow:hidden;font-family:monospace}
+canvas{image-rendering:pixelated;border:2px solid #333;border-radius:4px}
+#hud{position:absolute;top:16px;left:50%;transform:translateX(-50%);color:#fff;font-size:14px;display:flex;gap:32px;z-index:10}
+.hud-item{display:flex;align-items:center;gap:6px}
+.hud-val{color:#ff6;font-weight:bold}
+</style>
+</head>
+<body>
+<div id="hud">
+  <div class="hud-item">❤️ <span class="hud-val" id="hp">10</span>/<span id="maxhp">10</span></div>
+  <div class="hud-item">🪙 <span class="hud-val" id="coins">0</span></div>
+  <div class="hud-item">⚔️ <span class="hud-val" id="enemies">0</span></div>
+  <div class="hud-item">🏠 Floor <span class="hud-val" id="floor">1</span></div>
+</div>
+<canvas id="c"></canvas>
+<script src="game.js"></script>
+</body>
+</html>

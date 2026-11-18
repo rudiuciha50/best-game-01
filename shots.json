@@ -1,0 +1,8 @@
+{
+  "screenshots": [
+    {"file": "01_title.png", "description": "Title screen with game logo and start prompt"},
+    {"file": "02_gameplay.png", "description": "Mid-game action: player navigating dungeon with enemies and coins"},
+    {"file": "03_combat.png", "description": "Intense combat: player attacking multiple enemies with particle effects"},
+    {"file": "04_floor_clear.png", "description": "Floor cleared: gold explosion and celebration effects"}
+  ]
+}
